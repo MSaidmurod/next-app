@@ -16,7 +16,7 @@ async function ReposPage() {
             {repos.map((repo) => {
                 return (
                     <li key={repo.id}>
-                        <Link href={`https://github.com/MSaidmurod/${repo.name}`}>
+                        <Link href={`/code/repo/${repo.name}`}>
                         <h3>{repo.name}</h3>
                         <p>{repo.description}</p>
                         </Link>

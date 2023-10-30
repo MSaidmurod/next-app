@@ -1,18 +1,13 @@
+import REpoDir from "@/components/REpoDir"
+import Repo from "@/components/Repo"
 
-async function RepoPage({params: {name}}) {
-  const fetchRepos = async () => {
-    const req = await fetch(`https://api.github.com/repos/MSaidmurod/${name}`)
-    const data =await req.json()
-    return data
-  }
-
-
-  const repo = await fetchRepos()
+function RepoPage({params: {name}}) {
 
   
   return (
     <div>
-        <h1>{repo.full_name}</h1>
+        <Repo name={name}/>
+        {/* <REpoDir name={name}/> */}
     </div>
   )
 }
